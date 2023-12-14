@@ -24,7 +24,7 @@ const CompPrincipal = () => {
             "linea": linea,
             "sentido": sentido,
         })
-        fetch('https://backend-parcial.vercel.app/paradas/linea/', {
+        fetch('https://backend-parcial-git-main-ikergalcas-projects.vercel.app/paradas/linea/', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const CompPrincipal = () => {
         var raw = JSON.stringify({
             "nombre": nombreParada
         })
-        fetch('https://backend-parcial.vercel.app/paradas/nombre/', {
+        fetch('https://backend-parcial-git-main-ikergalcas-projects.vercel.app/paradas/nombre/', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ const CompPrincipal = () => {
         var raw = JSON.stringify({
             "direccion": direccion
         })
-        fetch('https://backend-parcial.vercel.app/paradas/cercanas/', {
+        fetch('https://backend-parcial-git-main-ikergalcas-projects.vercel.app/paradas/cercanas/', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ const CompPrincipal = () => {
 
     const mostrarMapa = () => {
         if(!ubicacionCargada) {
-            fetch('https://backend-parcial.vercel.app/paradas/ubicacion/', {
+            fetch('https://backend-parcial-git-main-ikergalcas-projects.vercel.app/paradas/ubicacion/', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

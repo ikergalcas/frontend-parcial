@@ -10,7 +10,7 @@ const PaginaInicial = () => {
     useEffect( () => {getUsuario()}, []);
 
     const getUsuario = async () => {
-        fetch(`https://backend-parcial.vercel.app/entidades/${idEntidad}`, {
+        fetch(`https://backend-parcial-git-main-ikergalcas-projects.vercel.app/entidades/${idEntidad}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
