@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
-const PaginaInicial = () => {
+const CompFoto = () => {
 
     const idEntidad = '657af6484dc899502be2832a'
 
@@ -90,4 +90,4 @@ const PaginaInicial = () => {
     )
 }
 
-export default PaginaInicial
+export default CompFoto
