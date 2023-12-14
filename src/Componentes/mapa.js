@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 
-const CompPrincipal = () => {
+const CompMapa = () => {
 
     const [position, setPosition] = useState([0, 0])
     const [paradas, setParadas] = useState()
@@ -180,4 +180,4 @@ const CompPrincipal = () => {
     )
 }
 
-export default CompPrincipal
+export default CompMapa
