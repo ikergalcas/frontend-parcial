@@ -18,8 +18,13 @@ const CompLogin = () => {
 
         /* global google */
         google.accounts.id.renderButton(
-            document.getElementById("singInDiv"),
-            {theme: "outline", size:"large"}
+            document.getElementById("singInDiv"), {
+                'scope': 'profile email',
+                'width': 240,
+                'height': 70,
+                'longtitle': true,
+                'theme': 'dark' 
+            }
 
         );
         
@@ -55,11 +60,8 @@ const CompLogin = () => {
     }
 
 
-    return (
-        <div className="container">
-            {/*<button onClick={volverAtras} className='btn btn-secondary mt-2'> Volver atrás</button>*/}            
-            <div id='singInDiv'></div>
-        </div>
+    return (  
+        <div id='singInDiv'></div>
     )
 }
 

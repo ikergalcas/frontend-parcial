@@ -12,6 +12,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<CompLogin/>}/>
+        <Route path="/login" element={<CompLogin/>}/>
         <Route path="/entidades" element={<CompInicial/>}/>
         <Route path="/mapa" element={<CompMapa/>}/>
       </Routes>

@@ -4,11 +4,13 @@ import CompLogin from "../login/Login.js";
 function paginaLogin() {
     return(
         <div>
-            <NavbarPage></NavbarPage>
-            <div className="container-fluid">
+            <div className="container mt-5" style={{textAlign : "center"}}>
                 <div className="row">
                     <div className="col">
-                        <CompLogin></CompLogin>
+                        <h1>Inicio de sesion</h1>
+                        <div className ='mt-5' style = {{marginLeft : '41%'}}>
+                            <CompLogin></CompLogin>
+                        </div>
                     </div>
                 </div>
             </div>
