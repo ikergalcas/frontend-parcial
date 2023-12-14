@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import NavbarPage from "../navbar/navbar.js";
-import CompFoto from "../componentes/foto.js"
+import CompFoto from "../Componentes/foto.js"
 
 const PaginaInicial = () => {
 
