@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 import CompLogin from './pages/paginaLogin.jsx';
 import CompInicial from './pages/paginaInicial.jsx';
-import CompMapa from './Componentes/Principal.js';
+import CompMapa from './Componentes/mapa.js';
 
 function App() {
   return (
