@@ -46,11 +46,9 @@ function cerrarSesion () {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className='navbar-collapse'>
         <Nav className="me-auto">
-          <Nav.Link href={`/`} className='navbar-link' style={{marginLeft: '10vmin'}}> Home
+          <Nav.Link href={`/entidades`} className='navbar-link' style={{marginLeft: '10vmin'}}> Home
           </Nav.Link>
-          <Nav.Link href={`/login`} className='navbar-link' style={{marginLeft: '10vmin'}}> Login
-          </Nav.Link> 
-          <Nav.Link href={`/entidades`} className='navbar-link' style={{marginLeft: '10vmin'}}> Entidad
+          <Nav.Link href={`/entidades`} className='navbar-link' style={{marginLeft: '10vmin'}}> Entidades
           </Nav.Link> 
         </Nav>
         <NavItem>{(nombreUsuario!='')? (nombreUsuario) : "Hola" }</NavItem>

@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import NavbarPage from "../navbar/navbar.js";
+import CompFoto from "../componentes/foto.js"
 
 const PaginaInicial = () => {
 
     const idEntidad = '657af6484dc899502be2832a'
 
     const [entidad, setEntidad] = useState([]); 
-    useEffect( () => {getUsuario()}, []);
+    useEffect( () => {getEntidad()}, []);
 
-    const getUsuario = async () => {
+    const getEntidad = async () => {
         fetch(`https://backend-parcial-ikergalcas-projects.vercel.app/entidades/${idEntidad}`, {
             method: 'GET',
             headers: {
@@ -36,7 +37,7 @@ const PaginaInicial = () => {
             var formdata = new FormData();
             formdata.append("foto", archivo);
     
-            fetch('http://localhost:4000/entidades/subirFoto', {
+            fetch('https://backend-parcial-ikergalcas-projects.vercel.app/entidades/subirFoto', {
                     method: 'POST',
                     body : formdata
                 }).then(response => response.json())
@@ -45,7 +46,7 @@ const PaginaInicial = () => {
                             "foto" : result.imageUrl
                           });
                         console.log(result.imageUrl)
-                        fetch(`http://localhost:4000/entidades/${idEntidad}`, {
+                        fetch(`https://backend-parcial-ikergalcas-projects.vercel.app/${idEntidad}`, {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -77,16 +78,7 @@ const PaginaInicial = () => {
                 <div className="row">
                     <div className="col">
                         <h2> Esta es nuestra pagina inicial</h2>
-                        <a href={'/mapa'} className='btn btn-primary'>Ver mapa</a>
-                        <div className='container-fluid'>
-                            <form id="formularioParte2" onSubmit={subirFotoIdentificativa}>
-                                <div style={{flexdirection: 'row', width:'90%'}} >
-                                    <input type="file" className="form-control" id="archivo" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".png , .jpg"/>
-                                    <button className="btn btn-secondary mt-2" type="submit" >Cambiar foto</button>
-                                    <img src={entidad.foto} alt="" style={{width:'39%'}} className="card-img-top img-fluid" />
-                                </div>
-                            </form>
-                        </div>
+                        <CompFoto></CompFoto>
                     </div>
                 </div>
             </div>

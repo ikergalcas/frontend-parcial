@@ -9,12 +9,6 @@ const CompPrincipal = () => {
     const [paradas, setParadas] = useState()
     const [mostrarParadas, setMostrarParadas] = useState(false)
     const [ubicacionCargada, setUbicacionCargada] = useState(false);
-
-    /* PARTE 2
-    Mediante un formulario, la aplicación permitirá seleccionar un número de línea y sentido, 
-    mostrándose entonces en el mapa marcadores correspondientes a todas las paradas de esa línea y 
-    sentido.
-    */
     const [linea, setLinea] = useState()
     const [sentido, setSentido] = useState()
 
@@ -38,12 +32,6 @@ const CompPrincipal = () => {
         })
     }
 
-    //-------------------------------------------------------------------------------------------------//
-    /* PARTE 3
-    Mediante un formulario, la aplicación permitirá seleccionar buscar una parada, a partir de un string
-    con parte de su nombre, mostrándose entonces en el mapa marcadores correspondientes a todas las 
-    paradas cuyo nombre cumpla la condición de búsqueda.
-    */
     const [nombreParada, setNombreParada] = useState()
     const buscarNombre = (e) => {
         e.preventDefault()
@@ -63,12 +51,6 @@ const CompPrincipal = () => {
         })
     }
 
-    //-------------------------------------------------------------------------------------------------//
-    /* PARTE 4
-    Mediante un formulario, la aplicación permitirá indicar una dirección postal (por ejemplo, Salitre 30, 
-    Málaga), mostrándose entonces en el mapa marcadores correspondientes a todas las paradas
-    próximas (aquellas cuya latitud y longitud están a menos de 0.003 unidades) de la dirección indicada.
-    */
     const [direccion, setDireccion] = useState()
     const buscarCercanas = (e) => {
         e.preventDefault()
@@ -87,7 +69,6 @@ const CompPrincipal = () => {
             setMostrarParadas(true)
         })
     }
-    //-------------------------------------------------------------------------------------------------//
 
     const limpiar = () => {
         setDireccion('')
