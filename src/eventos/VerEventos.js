@@ -11,7 +11,7 @@ const VerEventos = () => {
 
     const getEventos = async () => {
         // Hacer la solicitud para obtener eventos desde el backend
-        fetch('http://localhost:4000/eventos/', {
+        fetch('https://backend-parcial-ikergalcas-projects.vercel.app/eventos/', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ const VerEventos = () => {
 
     const borrarEvento = async (idEvento) => {
         // Hacer la solicitud para obtener eventos desde el backend
-        fetch(`http://localhost:4000/eventos/${idEvento}`, {
+        fetch(`https://backend-parcial-ikergalcas-projects.vercel.app/eventos/${idEvento}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

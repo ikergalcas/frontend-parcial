@@ -22,7 +22,7 @@ const CompCrearEvento = () => {
         });
 
         // Crear evento
-        fetch('http://localhost:4000/eventos/', {
+        fetch('https://backend-parcial-ikergalcas-projects.vercel.app/eventos/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const CompCrearEvento = () => {
             var formdata = new FormData();
             formdata.append("foto", archivo);
     
-            fetch('http://localhost:4000/eventos/subirFoto', {
+            fetch('https://backend-parcial-ikergalcas-projects.vercel.app/eventos/subirFoto', {
                     method: 'POST',
                     body : formdata
                 }).then(response => response.json())
@@ -62,7 +62,7 @@ const CompCrearEvento = () => {
                             "imagen" : result.imageUrl
                         });
                         console.log(result.imageUrl)
-                        fetch(`http://localhost:4000/eventos/${idEvento.replace(/"/g, '')}`, {
+                        fetch(`https://backend-parcial-ikergalcas-projects.vercel.app/eventos/${idEvento.replace(/"/g, '')}`, {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ const CompCrearEvento = () => {
                     });
 
             // Obtener lat y lon a partir de lugar
-            fetch(`http://localhost:4000/eventos/ubicacion/${idEvento.replace(/"/g, '')}`)
+            fetch(`https://backend-parcial-ikergalcas-projects.vercel.app/eventos/ubicacion/${idEvento.replace(/"/g, '')}`)
             .then(response => response.json())
             .then(data => {
                 if (data.latitude && data.longitude) {
@@ -92,7 +92,7 @@ const CompCrearEvento = () => {
                         "lat": data.lat,
                         "lon": data.lon
                     });
-                    fetch(`http://localhost:4000/eventos/${idEvento.replace(/"/g, '')}`, {
+                    fetch(`https://backend-parcial-ikergalcas-projects.vercel.app/eventos/${idEvento.replace(/"/g, '')}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json',
