@@ -53,7 +53,7 @@ const CompFoto = () => {
                         }).then(response => response.text())
                         .then(result => {
                             console.log(result)
-                            window.location.href = `/entidades/`;
+                            window.location.href = `/foto`;
                         })
                             .catch(error => {
                                 console.error('Error al subir la imagen:', error);
