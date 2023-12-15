@@ -74,12 +74,12 @@ const PaginaInicial = () => {
     return(
         <div>
             <NavbarPage></NavbarPage>
-            <div className="container-fluid">
+            <div className="container-fluid" style={{marginLeft: '9.5vmin'}}>
                 <div className="row">
                     <div className="col">
                         {localStorage.getItem('objetoToken') != undefined ? 
-                        <h2 className='ms'> Bienvenido {JSON.parse(localStorage.getItem('objetoToken')).correo}</h2> :
-                        <h2 className='ms'> Bienvenido invitado</h2>
+                        <h2> Bienvenido {JSON.parse(localStorage.getItem('objetoToken')).correo}</h2> :
+                        <h2> Bienvenido invitado</h2>
                         }
                     </div>
                 </div>
