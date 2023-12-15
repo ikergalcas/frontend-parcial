@@ -44,7 +44,7 @@ const CompFoto = () => {
                             "foto" : result.imageUrl
                           });
                         console.log(result.imageUrl)
-                        fetch(`https://backend-parcial-ikergalcas-projects.vercel.app/${idEntidad}`, {
+                        fetch(`https://backend-parcial-ikergalcas-projects.vercel.app/entidades/${idEntidad}`, {
                             method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',

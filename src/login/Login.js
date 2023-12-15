@@ -46,7 +46,6 @@ const CompLogin = () => {
                     window.location.href="/entidades"
                     //console.log(JSON.parse(localStorage.getItem('objetoToken')))
                 }
-                        
             })
             .catch(error => {
                 console.error('Error al obtener productos:', error);
