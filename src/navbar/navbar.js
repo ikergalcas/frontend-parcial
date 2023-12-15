@@ -9,14 +9,19 @@ function NavbarPage(props) {
 
   useEffect(() => {
     if(localStorage.getItem('objetoToken')!=undefined){
-      comprobarConexion() ///AJUSTAR A ESTE PROYECTO
+      comprobarConexion()
       setNombreUsuario(JSON.parse(localStorage.getItem('objetoToken')).correo)
       setFoto(JSON.parse(localStorage.getItem('objetoToken')).foto)
-    } 
+    } else {
+      setNombreUsuario("Invitado")
+      setFoto('http://res.cloudinary.com/dsvcyziih/image/upload/v1702631668/ecoaffylh8jxxumqbhki.webp')
+    }
 }, []);
 
+
 const comprobarConexion = async () => {
-  fetch(`https://backend-parcial-ikergalcas-projects.vercel.app/entidades/conexion/${JSON.parse(localStorage.getItem('objetoToken')).tokenId}/${JSON.parse(localStorage.getItem('objetoToken')).tokenCompleto}`, {
+  // console.log(JSON.parse(localStorage.getItem('objetoToken')).tokenId)
+  fetch(`https://backend-parcial-ikergalcas-projects.vercel.app/conexion/${JSON.parse(localStorage.getItem('objetoToken')).tokenId}/${JSON.parse(localStorage.getItem('objetoToken')).tokenCompleto}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -48,7 +53,7 @@ function cerrarSesion () {
         <Nav className="me-auto">
           <Nav.Link href={`/entidades`} className='navbar-link' style={{marginLeft: '10vmin'}}> Home
           </Nav.Link>
-          <Nav.Link href={`/entidades`} className='navbar-link' style={{marginLeft: '10vmin'}}> Entidades
+          <Nav.Link href={`/foto`} className='navbar-link' style={{marginLeft: '10vmin'}}> Foto
           </Nav.Link> 
           <Nav.Link href={`/mapa`} className='navbar-link' style={{marginLeft: '10vmin'}}> Mapa
           </Nav.Link> 

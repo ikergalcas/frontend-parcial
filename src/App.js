@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import CompLogin from './pages/paginaLogin.jsx';
 import CompInicial from './pages/paginaInicial.jsx';
 import CompMapa from "./Componentes/mapa.js"
+import CompFoto from "./Componentes/foto.js"
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<CompLogin/>}/>
         <Route path="/login" element={<CompLogin/>}/>
-        <Route path="/entidades" element={<CompInicial/>}/>
+        <Route path="/inicio" element={<CompInicial/>}/>
         <Route path="/mapa" element={<CompMapa/>}/>
+        <Route path="/foto" element={<CompFoto/>}/>
       </Routes>
     </BrowserRouter>
   );

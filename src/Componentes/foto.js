@@ -70,7 +70,7 @@ const CompFoto = () => {
     }
 
     return(
-        <div className='container-fluid'>
+        <div className='container-fluid m-5'>
             <div className='row' style={{width : "20%"}}>
                 <div className='col'>
                     <img src={entidad.foto} alt="" className="card-img-top img-fluid" />
@@ -80,7 +80,7 @@ const CompFoto = () => {
                 <div className='col'>
                 <form id="formularioParte2" onSubmit={subirFotoIdentificativa}>
                     <div style={{width:'20%'}} >
-                        <input type="file" className="form-control" id="archivo" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".png , .jpg"/>
+                        <input type="file" className="form-control mt-2" id="archivo" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept=".png , .jpg"/>
                         <button className="btn btn-secondary mt-2" type="submit" >Cambiar foto</button>
                     </div>
                 </form>

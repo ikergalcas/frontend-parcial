@@ -1,6 +1,7 @@
 //import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import NavbarPage from "../navbar/navbar.js";
 
 
 const CompMapa = () => {

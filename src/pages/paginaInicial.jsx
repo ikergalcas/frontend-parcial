@@ -77,8 +77,10 @@ const PaginaInicial = () => {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col">
-                        <h2> Esta es nuestra pagina inicial</h2>
-                        <CompFoto></CompFoto>
+                        {localStorage.getItem('objetoToken') != undefined ? 
+                        <h2 className='ms'> Bienvenido {JSON.parse(localStorage.getItem('objetoToken')).correo}</h2> :
+                        <h2 className='ms'> Bienvenido invitado</h2>
+                        }
                     </div>
                 </div>
             </div>

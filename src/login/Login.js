@@ -32,7 +32,7 @@ const CompLogin = () => {
 
     function handleCallBackResponse (response){
         console.log("Encode JWT: "+  response.credential)
-        fetch(`https://backend-parcial-ikergalcas-projects.vercel.app/entidades/loginToken/${response.credential}`, {
+        fetch(`https://backend-parcial-ikergalcas-projects.vercel.app/loginToken/${response.credential}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ const CompLogin = () => {
                 if (data){
                     data.tokenCompleto= response.credential
                     localStorage.setItem('objetoToken', JSON.stringify(data));
-                    window.location.href="/entidades"
+                    window.location.href="/inicio"
                     //console.log(JSON.parse(localStorage.getItem('objetoToken')))
                 }
             })
