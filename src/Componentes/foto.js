@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 
 const CompFoto = () => {
 
-    const idEntidad = '657af6484dc899502be2832a'
+    const {idEntidad} = useParams()
 
     const [entidad, setEntidad] = useState([]); 
     useEffect( () => {getEntidad()}, []);

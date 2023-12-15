@@ -16,7 +16,7 @@ function App() {
         <Route path="/login" element={<CompLogin/>}/>
         <Route path="/inicio" element={<CompInicial/>}/>
         <Route path="/mapa" element={<CompMapa/>}/>
-        <Route path="/foto" element={<CompFoto/>}/>
+        <Route path="/foto/:idEntidad" element={<CompFoto/>}/>
       </Routes>
     </BrowserRouter>
   );

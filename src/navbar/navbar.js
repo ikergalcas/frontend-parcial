@@ -53,7 +53,7 @@ function cerrarSesion () {
         <Nav className="me-auto">
           <Nav.Link href={`/inicio`} className='navbar-link' style={{marginLeft: '10vmin'}}> Home
           </Nav.Link>
-          <Nav.Link href={`/foto`} className='navbar-link' style={{marginLeft: '10vmin'}}> Foto
+          <Nav.Link href={`/foto/657af6484dc899502be2832a`} className='navbar-link' style={{marginLeft: '10vmin'}}> Foto
           </Nav.Link> 
           <Nav.Link href={`/mapa`} className='navbar-link' style={{marginLeft: '10vmin'}}> Mapa
           </Nav.Link> 
