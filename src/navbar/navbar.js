@@ -61,8 +61,6 @@ function cerrarSesion () {
         <NavItem>{(nombreUsuario!='')? (nombreUsuario) : "Hola" }</NavItem>
         <Nav>
             <NavDropdown drop='start' className='me-3' title={<img src={foto} style={{ width: '6vh', borderRadius: '50%' }} alt="" />} id="basic-nav-dropdown">
-            <NavDropdown.Item href={`/myUserInfo/`}>Ver mi perfil</NavDropdown.Item>
-            <NavDropdown.Divider />
             <NavDropdown.Item href="/" onClick={cerrarSesion}>Cerrar sesión</NavDropdown.Item>
           </NavDropdown>
         </Nav>
