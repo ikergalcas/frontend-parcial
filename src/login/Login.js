@@ -12,7 +12,7 @@ const CompLogin = () => {
     useEffect (() => {
         /* global google */
         google.accounts.id.initialize({
-            client_id: "249081549551-2m7g5cc6fo0vigcp6tk7u76gn43gpqab.apps.googleusercontent.com",
+            client_id: '249081549551-2m7g5cc6fo0vigcp6tk7u76gn43gpqab.apps.googleusercontent.com',
             callback: handleCallBackResponse
         });
 
