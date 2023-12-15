@@ -51,7 +51,7 @@ function cerrarSesion () {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className='navbar-collapse'>
         <Nav className="me-auto">
-          <Nav.Link href={`/entidades`} className='navbar-link' style={{marginLeft: '10vmin'}}> Home
+          <Nav.Link href={`/inicio`} className='navbar-link' style={{marginLeft: '10vmin'}}> Home
           </Nav.Link>
           <Nav.Link href={`/foto`} className='navbar-link' style={{marginLeft: '10vmin'}}> Foto
           </Nav.Link> 
